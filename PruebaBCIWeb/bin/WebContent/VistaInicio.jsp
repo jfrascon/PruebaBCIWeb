@@ -12,7 +12,6 @@
 	//Buscar el pool de conexiones en JNDI.
 	Context envCtx = (Context) initCtx.lookup("java:comp/env");
 	DataSource servicioConexiones = (DataSource) envCtx.lookup("jdbc/pruebabiicode");
-	// Obtener una conexion a la bd, usarla y luego devolverla.
 	BaseDatos bd = new BaseDatos(servicioConexiones);
 	String[] nombreCiudades = bd.obtenerNombreCiudades();
 	bd.cerrarConexionConBD();
