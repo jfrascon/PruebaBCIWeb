@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>PruebaBCIWeb</display-name>
+
+	<servlet>
+		<servlet-name>CalcularRuta</servlet-name>
+		<servlet-class>CalcularRuta</servlet-class>
+		<init-param>
+			<param-name>baseDatos</param-name>
+			<param-value>pruebabiicode</param-value>
+		</init-param>
+	</servlet>
+
+	<welcome-file-list>
+		<welcome-file>VistaInicio.html</welcome-file>
+		<welcome-file>VistaInicio.htm</welcome-file>
+		<welcome-file>VistaInicio.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+  <session-config>
+    <session-timeout>
+            10
+    </session-timeout>
+  </session-config>
+
+	<resource-ref>
+		<res-ref-name>jdbc/pruebabiicode</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+
+</web-app>
